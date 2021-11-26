@@ -18,6 +18,7 @@ public class boardPath {
         totalWays(arr, 0, n, "");
         System.out.println();
         System.out.println(count);
+        scannerObject.close();
     }
 
     public static void totalWays(int[] arr, int amount, int n, String s) {

@@ -13,10 +13,11 @@ public class lastIndex {
             arr[i] = scannerObject.nextInt();
         }
         int m = scannerObject.nextInt();
-        lastIndex(arr, n - 1, m);
+        lastOccurence(arr, n - 1, m);
+        scannerObject.close();
     }
 
-    public static void lastIndex(int[] arr, int i, int m) {
+    public static void lastOccurence(int[] arr, int i, int m) {
         if (i < 0) {
             System.out.print("-1");
             return;
@@ -26,7 +27,7 @@ public class lastIndex {
             return;
         }
 
-        lastIndex(arr, i - 1, m);
+        lastOccurence(arr, i - 1, m);
     }
 
 }

@@ -12,6 +12,7 @@ public class asciiSubsequence {
         FindSub(str, res, 0);
         System.out.println();
         System.out.println(count);
+        sc.close();
     }
 
     static int count = 0;

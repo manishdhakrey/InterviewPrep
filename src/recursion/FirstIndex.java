@@ -13,6 +13,7 @@ public class FirstIndex {
         }
         int m = scannerObject.nextInt();
         firstIndex(arr, 0, m);
+        scannerObject.close();
     }
 
     public static void firstIndex(int[] arr, int i, int m) {

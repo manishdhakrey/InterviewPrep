@@ -12,18 +12,19 @@ public class isArraySorted {
         for (int i = 0; i < n; i++) {
             arr[i] = scannerObject.nextInt();
         }
-        boolean res = isArraySorted(arr, n);
+        boolean res = isArrSorted(arr, n);
         System.out.println(res);
+        scannerObject.close();
     }
 
-    public static boolean isArraySorted(int[] arr, int n) {
+    public static boolean isArrSorted(int[] arr, int n) {
         if (n == 1 || n == 0) {
             return true;
         }
         if (arr[n - 1] < arr[n - 2]) {
             return false;
         }
-        return isArraySorted(arr, n - 1);
+        return isArrSorted(arr, n - 1);
     }
 
 }

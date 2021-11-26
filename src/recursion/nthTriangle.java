@@ -9,6 +9,7 @@ public class nthTriangle {
         Scanner scannerObject = new Scanner(System.in);
         int n = scannerObject.nextInt();
         System.out.println(nthTraingle(n));
+        scannerObject.close();
     }
 
     public static int nthTraingle(int n) {

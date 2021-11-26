@@ -14,6 +14,7 @@ public class allIndices {
         }
         int m = sc.nextInt();
         containM(arr, m, 0);
+        sc.close();
     }
 
     public static void containM(int[] arr, int m, int i) {

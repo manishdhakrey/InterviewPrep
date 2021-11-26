@@ -12,6 +12,7 @@ public class reverseAnArray {
             arr[i] = scannerObject.nextInt();
         }
         reverseArray(arr, 0);
+        scannerObject.close();
     }
 
     public static void reverseArray(int[] arr, int i) {

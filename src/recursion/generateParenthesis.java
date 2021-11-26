@@ -8,6 +8,7 @@ public class generateParenthesis {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         printParenthesis(n, 0, 0, "");
+        sc.close();
 
     }
 

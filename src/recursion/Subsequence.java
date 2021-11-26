@@ -13,6 +13,7 @@ public class Subsequence {
         printSequences(str, res, 0);
         System.out.println();
         System.out.print(count);
+        sc.close();
     }
 
     static int count = 0;

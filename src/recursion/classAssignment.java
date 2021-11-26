@@ -10,6 +10,7 @@ public class classAssignment {
             int n = sc.nextInt();
             System.out.println("#" + (i + 1) + " : " + distinctNumber(n, ""));
         }
+        sc.close();
     }
 
     public static int distinctNumber(int n, String ans) {
