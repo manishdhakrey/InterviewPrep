@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Scanner;
 
-public class FirstIndex {
+public class reverseAnArray {
     public static void main(String args[]) {
         // Your Code Here
         Scanner scannerObject = new Scanner(System.in);
@@ -11,20 +11,14 @@ public class FirstIndex {
         for (int i = 0; i < n; i++) {
             arr[i] = scannerObject.nextInt();
         }
-        int m = scannerObject.nextInt();
-        firstIndex(arr, 0, m);
+        reverseArray(arr, 0);
     }
 
-    public static void firstIndex(int[] arr, int i, int m) {
+    public static void reverseArray(int[] arr, int i) {
         if (i > arr.length - 1) {
-            System.out.print("-1");
             return;
         }
-        if (m == arr[i]) {
-            System.out.print(i);
-            return;
-        }
-
-        firstIndex(arr, i + 1, m);
+        reverseArray(arr, i + 1);
+        System.out.print(arr[i] + " ");
     }
 }
