@@ -9,20 +9,21 @@ public class allIndices {
             Scanner sc = new Scanner(System.in);
             int n = sc.nextInt();
             int[] arr = new int[n];
-            for(int i = 0; i < n; i++){
+            for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
             int m = sc.nextInt();
             containM(arr, m, 0);
         }
-    
-        public static void containM(int[] arr, int m, int i){
-            if(i == arr.length){
-                return ;
+
+        public static void containM(int[] arr, int m, int i) {
+            if (i == arr.length) {
+                return;
             }
-            if(arr[i] == m){
-                System.out.print(i+" ");
+            if (arr[i] == m) {
+                System.out.print(i + " ");
             }
-            containM(arr,m,i+1);
+            containM(arr, m, i + 1);
         }
+    }
 }

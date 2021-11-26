@@ -11,11 +11,13 @@ public class nthTriangle {
             System.out.println(nthTraingle(n));
         }
 
-        public static int nthTraingle(int n){
-          int x = n;
-            if(n == 1){
+        public static int nthTraingle(int n) {
+            int x = n;
+            if (n == 1) {
                 return 1;
             }
-            x = x + nthTraingle(n-1);
+            x = x + nthTraingle(n - 1);
             return x;
+        }
+    }
 }
