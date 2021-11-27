@@ -3,35 +3,30 @@ package recursion;
 import java.util.Scanner;
 
 public class boardPath {
-
-    static int count = 0;
-
     public static void main(String args[]) {
         // Your Code Here
         Scanner scannerObject = new Scanner(System.in);
         int n = scannerObject.nextInt();
         int m = scannerObject.nextInt();
-        int[] arr = new int[m];
-        for (int i = 0; i < m; i++) {
-            arr[i] = i + 1;
-        }
-        totalWays(arr, 0, n, "");
+        int ans = totalWays(m, n, 0, "");
         System.out.println();
-        System.out.println(count);
+        System.out.println(ans);
         scannerObject.close();
     }
 
-    public static void totalWays(int[] arr, int amount, int n, String s) {
-        if (amount > n)
-            return;
-        if (amount == n) {
-            count++;
-            System.out.print(s + " ");
-            return;
+    public static int totalWays(int m, int n, int curr, String ans) {
+
+        if (curr == n) {
+            System.out.print(ans + " ");
+            return 1;
         }
-        for (int i = 0; i < arr.length; i++) {
-            Integer a = arr[i];
-            totalWays(arr, amount + arr[i], n, s + a.toString());
+        if (curr > n) {
+            return 0;
         }
+        int count = 0;
+        for (int i = 1; i <= m; i++) {
+            count += totalWays(m, n, curr + i, ans + i);
+        }
+        return count;
     }
 }

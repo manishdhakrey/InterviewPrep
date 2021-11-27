@@ -8,18 +8,22 @@ public class classAssignment {
         int t = sc.nextInt();
         for (int i = 0; i < t; i++) {
             int n = sc.nextInt();
-            System.out.println("#" + (i + 1) + " : " + distinctNumber(n, ""));
+            System.out.println("#" + (i + 1) + " : " + solve(n, "", false));
         }
         sc.close();
     }
 
-    public static int distinctNumber(int n, String ans) {
-        if (ans.length() == n)
+    public static int solve(int n, String ans, boolean isPB) {
+        if (ans.length() == n) {
             return 1;
+        }
+        if (ans.length() > n) {
+            return 0;
+        }
         int count = 0;
-        count = count + distinctNumber(n, ans + 'a');
-        if (ans.length() == 0 || ans.charAt(ans.length() - 1) != 'b') {
-            count = count + distinctNumber(n, ans + 'b');
+        count += solve(n, ans + "a", false);
+        if (!isPB) {
+            count += solve(n, ans + "b", true);
         }
         return count;
     }

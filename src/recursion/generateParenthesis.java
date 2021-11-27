@@ -12,15 +12,15 @@ public class generateParenthesis {
 
     }
 
-    public static void printParenthesis(int n, int oc, int cc, String s) {
+    public static void printParenthesis(int n, int oc, int cc, String ans) {
         if (oc == n && cc == n) {
-            System.out.println(s);
+            System.out.println(ans);
         }
         if (oc > cc) {
-            printParenthesis(n, oc, cc + 1, s + ')');
+            printParenthesis(n, oc, cc + 1, ans + ')');
         }
         if (oc < n) {
-            printParenthesis(n, oc + 1, cc, s + '(');
+            printParenthesis(n, oc + 1, cc, ans + '(');
         }
     }
 }

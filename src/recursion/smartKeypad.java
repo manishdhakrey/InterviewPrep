@@ -12,7 +12,7 @@ public class smartKeypad {
 
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                System.out.println(table[a] + table[b]);
+                System.out.println(table[a].charAt(i) + table[b].charAt(j));
             }
         }
         sc.close();
