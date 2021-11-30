@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Scanner;
 
-public class boardPath {
+public class BoardPath1 {
     public static void main(String args[]) {
         // Your Code Here
         Scanner scannerObject = new Scanner(System.in);
