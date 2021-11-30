@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class DictionaryLarger {
+public class DictionarySmaller {
     public static void main(String[] args) {
         Scanner scannerObject = new Scanner(System.in);
         String str = scannerObject.nextLine();
@@ -22,7 +22,7 @@ public class DictionaryLarger {
                 break;
             }
         }
-        for (int i = idx + 1; i < list.size(); i++) {
+        for (int i = 0; i < idx; i++) {
             System.out.println(list.get(i));
         }
         scannerObject.close();
