@@ -7,6 +7,7 @@ public class smartKeypad {
         Scanner scn = new Scanner(System.in);
         String str = scn.nextLine();
         printSmartKeyBoard(str, "", 0);
+        scn.close();
 
     }
 
