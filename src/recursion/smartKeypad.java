@@ -3,18 +3,23 @@ package recursion;
 import java.util.Scanner;
 
 public class smartKeypad {
-    public static void main(String args[]) {
-        String[] table = { " ", ".+@$", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int a = n / 10;
-        int b = n % 10;
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.nextLine();
+        printSmartKeyBoard(str, "", 0);
 
-        for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                System.out.println(table[a].charAt(i) + table[b].charAt(j));
-            }
+    }
+
+    public static void printSmartKeyBoard(String str, String ans, int index) {
+        if (index == str.length()) {
+            System.out.print(ans + " ");
+            return;
         }
-        sc.close();
+        String[] table = { " ", ".+@$", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+        String letters = table[str.charAt(index) - '0'];
+        for (int i = 0; i < letters.length(); i++) {
+            printSmartKeyBoard(str, ans + letters.charAt(i), index + 1);
+        }
+
     }
 }
