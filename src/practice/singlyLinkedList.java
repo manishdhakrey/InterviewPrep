@@ -23,8 +23,7 @@ public class singlyLinkedList {
     }
 
     public static void main(String[] args) {
-        singlyLinkedList sll = new singlyLinkedList();
-        sll.head = new ListNode(2);
+        singlyLinkedList.head = new ListNode(2);
         ListNode second = new ListNode(4);
         ListNode third = new ListNode(6);
         ListNode fourth = new ListNode(8);
@@ -33,6 +32,6 @@ public class singlyLinkedList {
         third.next = fourth;
         fourth.next = null;
 
-        sll.display();
+        singlyLinkedList.display();
     }
 }
